@@ -34,10 +34,11 @@ public class Course {
     public void printCourseInfo() {
         System.out.println("Course Id: " + courseId);
         System.out.println("Course Name: " + courseName);
+        System.out.println("Faculty Name: " + faculty.getName());
         System.out.println("Number of Students: " + students.size());
 
         for (int i = 0; i< students.size(); i++) {
-            System.out.println(students.get(i).getName());
+            System.out.println("Student: " +students.get(i).getName());
         }
     }
 
