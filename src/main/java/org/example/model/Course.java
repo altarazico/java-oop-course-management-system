@@ -19,7 +19,27 @@ public class Course {
         students.add(pStudent);
     }
 
+    public void removeStudent(Student pStudent) {
+        students.remove(pStudent);
+    }
+
     public void setFaculty(Faculty pFaculty) {
         faculty = pFaculty;
     }
+
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
+
+    public void printCourseInfo() {
+        System.out.println("Course Id: " + courseId);
+        System.out.println("Course Name: " + courseName);
+        System.out.println("Number of Students: " + students.size());
+
+        for (int i = 0; i< students.size(); i++) {
+            System.out.println(students.get(i).getName());
+        }
+    }
+
 }
+
