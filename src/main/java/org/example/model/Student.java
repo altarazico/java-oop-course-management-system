@@ -30,4 +30,17 @@ public class Student extends Person {
             courses.add(course);
         }
     }
+
+    public void removeCourse(Course course) {
+        courses.remove(course);
+    }
+
+    public void printStudentCourses() {
+        System.out.println("Student Name: " + getName());
+        System.out.println("Registered Courses: " + courses.size());
+
+        for (int i = 0; i < courses.size(); i++) {
+            System.out.println("Course: " + courses.get(i).getCourseName());
+        }
+    }
 }

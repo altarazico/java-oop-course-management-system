@@ -22,6 +22,7 @@ public class Main {
         //course1.removeStudent(student2);
 
         course1.printCourseInfo();
+        student1.printStudentCourses();
 
     }
 }

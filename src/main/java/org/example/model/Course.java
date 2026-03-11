@@ -15,14 +15,11 @@ public class Course {
         students = new ArrayList<>();
     }
 
-    public void addStudent (Student pStudent) {
+    public void addStudent(Student pStudent) {
         if (!hasStudent(pStudent)) {
             students.add(pStudent);
-            System.out.println("Student successfully added");
-        } else {
-            System.out.println("Student already registered");
+            pStudent.addCourse(this);
         }
-
     }
 
     public void removeStudent(Student pStudent) {
