@@ -34,7 +34,6 @@ public class Course {
     public void printCourseInfo() {
         System.out.println("Course Id: " + courseId);
         System.out.println("Course Name: " + courseName);
-        //System.out.println("Faculty Name: " + faculty.getName());
         if (faculty != null) {
             System.out.println("Faculty Name: " + faculty.getName());
         } else {
