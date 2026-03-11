@@ -9,5 +9,25 @@ public class Student extends Person {
 
     public Student(int personId, String name) {
         super(personId, name);
+        this.major = "";
+        this.courses = new ArrayList<>();
+    }
+
+    public String getMajor() {
+        return major;
+    }
+
+    public void setMajor(String major) {
+        this.major = major;
+    }
+
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public void addCourse(Course course) {
+        if (!courses.contains(course)) {
+            courses.add(course);
+        }
     }
 }

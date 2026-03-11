@@ -32,4 +32,21 @@ public class Person {
         this.name = name;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Person other = (Person) obj;
+        return personId == other.personId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(personId);
+    }
+
 }
