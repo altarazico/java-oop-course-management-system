@@ -34,7 +34,12 @@ public class Course {
     public void printCourseInfo() {
         System.out.println("Course Id: " + courseId);
         System.out.println("Course Name: " + courseName);
-        System.out.println("Faculty Name: " + faculty.getName());
+        //System.out.println("Faculty Name: " + faculty.getName());
+        if (faculty != null) {
+            System.out.println("Faculty Name: " + faculty.getName());
+        } else {
+            System.out.println("Faculty Name: Not Assigned");
+        }
         System.out.println("Number of Students: " + students.size());
 
         for (int i = 0; i< students.size(); i++) {
