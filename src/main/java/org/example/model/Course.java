@@ -16,11 +16,21 @@ public class Course {
     }
 
     public void addStudent (Student pStudent) {
-        students.add(pStudent);
+        if (!hasStudent(pStudent)) {
+            students.add(pStudent);
+            System.out.println("Student successfully added");
+        } else {
+            System.out.println("Student already registered");
+        }
+
     }
 
     public void removeStudent(Student pStudent) {
         students.remove(pStudent);
+    }
+
+    public boolean hasStudent(Student pStudent) {
+        return students.contains(pStudent);
     }
 
     public void setFaculty(Faculty pFaculty) {
@@ -29,6 +39,18 @@ public class Course {
 
     public ArrayList<Student> getStudents() {
         return students;
+    }
+
+    public int getCourseId() {
+        return courseId;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public Faculty getFaculty() {
+        return faculty;
     }
 
     public void printCourseInfo() {

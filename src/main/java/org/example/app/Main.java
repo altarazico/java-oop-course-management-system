@@ -14,7 +14,7 @@ public class Main {
 
         Course course1 = new Course(001, "Introduction to CS");
         course1.addStudent(student1);
-        course1.addStudent(student2);
+        course1.addStudent(student1);
 
         Faculty faculty = new Faculty(001, "Dr. Al Tarazi");
         course1.setFaculty(faculty);
